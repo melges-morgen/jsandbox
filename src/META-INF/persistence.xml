@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+
+    <persistence-unit name="UserDataSource" transaction-type="JTA">
+        <class>ru.rusal.database.User</class>
+        <class>ru.rusal.database.Account</class>
+        <jta-data-source>java:comp/env/rusal_test_datasource</jta-data-source>
+        <properties>
+            <property name="eclipselink.ddl-generation" value="create-tables" />
+            <property name="eclipselink.ddl-generation.output-mode"
+                      value="database" />
+        </properties>
+    </persistence-unit>
+</persistence>
